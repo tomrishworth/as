@@ -1,0 +1,13 @@
+ul.menu{
+  @include zero;
+  li.leaf{
+    display: inline;
+    list-style-image: none;
+    list-style-type: none;
+    a{
+      display: block;
+      padding: 10px;
+      float: left;
+    }
+  }
+}

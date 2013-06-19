@@ -1,0 +1,77 @@
+/*******************************************************************************
+ * _utils.scss
+ *
+ * Sass offers come very useful features, these include variables functions and
+ * mixins. Extensions such as Compass and Susy can also be used to provide extra
+ * functions and mixins to be used throughout the theme. This file acts as a
+ * single place for defining these things, which can then be accessed by
+ * importing _utils.scss where required. The following should be defined in this
+ * file:
+ * - Custom Sass mixins for the theme.
+ * - Custom Sass functions for the theme.
+ * - Overriding the default variables provided by extensions such as Compass.
+ * - Defining new variables for:
+ *      - Colors.
+ *      - Font sizes and families.
+ *      - Layout and grid sizing.
+ ******************************************************************************/
+
+
+// Typography
+
+$basefontfamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$basefontsize: 16;
+$baselineheight: 1.4;
+
+
+// Colours
+
+$primarycolor: #1077BC;
+$secondarycolor: rgb(164,50,21);
+$tertiarycolor: rgb(41,47,54);
+
+$linkcolor: $primarycolor;
+$linkcolorhover: darken($linkcolor, 10);
+
+
+// Mixins
+
+
+@mixin font-size($font-size: 16){
+  font-size : #{$font-size}px;
+  font-size : #{$font-size / 10}rem;
+}
+
+@mixin img-frame($padding: 4px){
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: $padding;
+}
+
+@mixin list{
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li{
+      margin: 0 0 10px 0;
+      padding: 0;
+      list-style-type: none;
+    }
+  }
+}
+
+@mixin border-radius($top: 10px, $right: $top, $bottom: $top, $left: $right) {
+  border-radius: $top $right $bottom $left;
+  -moz-border-radius: $top $right $bottom $left;
+  -webkit-border-top-left-radius: $top;
+  -webkit-border-top-right-radius: $right;
+  -webkit-border-bottom-left-radius: $bottom;
+  -webkit-border-bottom-right-radius: $left;
+}
+
+@mixin zero {
+  margin : 0;
+  padding : 0; 
+}
