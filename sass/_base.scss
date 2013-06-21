@@ -13,7 +13,9 @@
  * features are added they will be correctly styled without any extra work.
  ******************************************************************************/
 
-
+*{
+  @include box-sizing(border-box);
+}
 
 html{
   font-size: 62.5%;
@@ -32,4 +34,9 @@ a{
   &:hover{
     color: $linkcolorhover;
   }
+}
+
+img{
+  max-width: 100%;
+  height: auto;
 }
