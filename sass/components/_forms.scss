@@ -42,9 +42,17 @@ input.form-text, textarea{
 }
 
 
-#edit-actions .form-submit{
+.form-submit{
   padding: 13px 20px 11px 19px;
   font-size: 1.3em;
+  background: $linkcolorhover;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  border-bottom: 3px solid darken($linkcolorhover, 20);
+  &:hover{
+    background: darken($linkcolorhover, 10);
+  }
 }
 
 .form-item label {
@@ -69,10 +77,10 @@ input.form-text, textarea{
 .form-checkbox:focus,
 .form-radio:focus,
 .form-select:focus {
-  border: 1px solid #d7f2fb;
-  background: #f0f8fa;
+  border: 1px solid #999;
+  //background: #f0f8fa;
 }
 textarea:focus {
-  border: 1px solid #d7f2fb;
+  border: 1px solid #999;
   background: #fff;
 }
