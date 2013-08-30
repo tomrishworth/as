@@ -39,6 +39,7 @@ input.form-text, textarea{
   padding: 8px;
   @include border-radius (5px);
   border: 1px solid #ccc;
+  width: 100%;
 }
 
 
