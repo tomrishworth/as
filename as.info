@@ -1,11 +1,11 @@
-name = as
-description = Omega subtheme by Atmosphere Studios.
+name = AS
+description = Please provide a description for your theme.
 base theme = omega
 screenshot = screenshot.png
 engine = phptemplate
 core = 7.x
-stylesheets[all][] = css/reset.css
-stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/as.normalize.css
+stylesheets[all][] = css/as.styles.css
 regions[header] = Header
 regions[navigation] = Navigation
 regions[highlighted] = Highlighted

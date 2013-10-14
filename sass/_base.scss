@@ -13,9 +13,10 @@
  * features are added they will be correctly styled without any extra work.
  ******************************************************************************/
 
-*{
-  @include box-sizing(border-box);
-}
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
 
 html{
   font-size: 62.5%;
@@ -50,5 +51,20 @@ h1, h2, h3, h4, h5, h6{
   .expanded, .collapsed, .leaf{
     list-style-image: none;
     list-style-type: none;
+  }
+}
+
+// Header
+
+.l-header{
+  background: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+}
+
+// Homepage
+
+.front{
+  h1.page-title{
+    display: none;
   }
 }

@@ -19,15 +19,13 @@ $gutter-width: $horz-spacing-unit;
 $grid-padding: 5px;
 
 $container-style: magic;
-$container-width: 1200px;
+$container-width: 1024px;
 
 // Susy Media Layouts @see http://susy.oddbird.net/guides/reference/#ref-media-layouts
 $tab: 44em 12; // At 44em use 12 columns.
 $desk: 70em 16; // At 70em use 16 columns.
 
-.l-header,
-.l-main,
-.l-footer {
+.l-constrained{
   @include container; // Define these elements as the grid containers.
   // @include susy-grid-background; // Show the columns for debugging.
   margin-bottom: $vert-spacing-unit;
@@ -41,9 +39,7 @@ $desk: 70em 16; // At 70em use 16 columns.
 }
 
 @include at-breakpoint($tab) { // At a given Susy Media Layout, use a given amount of columns.
-  .l-header,
-  .l-main,
-  .l-footer {
+.l-constrained {
     @include set-container-width; // Reset only the container width (elements have already been declared as containers).
     // @include susy-grid-background; // Show the columns for debugging.
   }
@@ -75,9 +71,7 @@ $desk: 70em 16; // At 70em use 16 columns.
 }
 
 @include at-breakpoint($desk) {
-  .l-header,
-  .l-main,
-  .l-footer {
+  .l-constrained {
     @include set-container-width; // Reset only the container width (elements have already been declared as containers).
     // @include susy-grid-background; // Show the columns for debugging.
   }
